@@ -83,4 +83,3 @@ For full version checklist, see [version-checklist.md](docs/roadmap/version-chec
 
 ## Developer Documentation
 
-For developers, see [Developer's Documentation](docs/README.md).
