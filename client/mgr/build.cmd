@@ -1,1 +1,0 @@
-﻿go build mgr.go && rm ../../mgr.* && mv ./mgr.exe ../../

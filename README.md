@@ -1,104 +1,86 @@
-Mzr
-=========
-基于Toropress衍生而来的图站源码.是Lihuashu.com的开发代号,
-在阿里云上线后流量增速非常快,但鉴于国内的环境,运营一段时间后收到阿里云发出的照会,
-此种类型的网站有政策风险,于是梨花树的图站版本被迫下线..
+# MetaTrader MCP Server
 
-目前[Lihuashu.com](http://lihuashu.com)的域名已经跳转至sudochina.com,无法为你提供演示,请自行在本地编译尝鲜.
+[![PyPI version](https://img.shields.io/pypi/v/metatrader-mcp-server.svg?style=flat&color=blue)](https://pypi.org/project/metatrader-mcp-server/)
 
-欢迎各位改进本项目源码,并反馈给我,谢谢大家一致以来的支持
-,感谢那些捐助过本项目的用户,如需定制请联系我.
+This is a Model Context Protocol (MCP) server built with Python to enable AI LLMs to trade using MetaTrader platform.
 
+![MetaTrader MCP Server](https://yvkbpmmzjmfqjxusmyop.supabase.co/storage/v1/object/public/github//metatrader-mcp-server-1.png)
 
-##轻量级社区版本
+## Disclaimer
 
-[YouGam社区](http://www.yougam.com/)
+**Financial trading involves significant risk, and the developers of this package disclaim any liability for any losses or profits; this package is provided solely to facilitate MetaTrader 5 trade executions via AI LLMs using the Model Context Protocol (MCP). By using this package, you assume all risks and agree not to hold the developers liable or to initiate any legal action for any damages, losses, or profits.**
 
-(类似V2EX,购买系统请联系作者QQ547092001)
+## Updates
 
+- May 5, 2025: Use broker-based filling modes (0.2.5)
+- April 23, 2025: Published to PyPi (0.2.0) 
+- April 16, 2025: We have our first minor version release (0.1.0) 
 
-##线上开源技术分享平台版本
+## Installation Guide
 
-[SudoChina](http://www.sudochina.com/)
+Make sure you have Python version 3.10+ and MetaTrader 5 terminal installed in your workspace. Then install the package:
 
+```bash
+pip install metatrader-mcp-server
+```
 
-## 企业型演示网站
+Then you need to enable algorithmic trading on MetaTrader 5 terminal. Open `Tools > Options` and check `Allow algorithmic trading`.
 
-[访问艾美](<http://www.ibeautys.com/>)
+## Claude Desktop Integration
 
-[访问因特拉](<http://www.interla.net/>)
+To use this package to enable trading operations via Claude Desktop app, please add this into your Claude Desktop configuration:
 
+```json
+{
+  "mcpServers": {
+    "metatrader": {
+      "command": "metatrader-mcp-server",
+      "args": [
+        "--login",    "<YOUR_MT5_LOGIN>",
+        "--password", "<YOUR_MT5_PASSWORD>",
+        "--server",   "<YOUR_MT5_SERVER>"
+      ]
+    }
+  }
+}
+```
 
-## 实验性社区型演示网站
+## Other LLMs using Open WebUI
 
-[访问 非常时刻 (Veryhour)](<http://www.veryhour.com/>)[演示站点已经下线]
+You can use this MCP server with other LLMs such as OpenAI's GPT by using its HTTP server and Open WebUI.
 
+To start, make sure you have installed the package. Then, run the server:
 
-## 图片分享社区演示网站
+```
+metatrader-http-server --login <YOUR_MT5_LOGIN> --password <YOUR_MT5_PASSWORD> --server <YOUR_MT5_SERVER> --host 0.0.0.0 --port 8000
+```
 
-[访问 梨花树社区](<http://www.lihuashu.com/>)[演示站点已经下线]
+It will launch HTTP server locally on port 8000 and automatically launch MetaTrader 5 terminal.
 
+On Open WebUI settings page, navigate to **Tools** menu. Then click plus button on "Manage Tool Servers". Add `http://localhost:8000` (or whatever you set your port is).
 
-# 通过捐款支持Toropress项目
-如果你喜欢这个项目的话， 可以通过捐款的方式， 支持作者继续更新本项目或者做出其他更多好玩好用的开源应用： 比如为本项目修补漏洞、添加更多有趣的功能， 或者发行有更多更棒特性的下一版等等。
+![Open WebUI - Add Connection](https://yvkbpmmzjmfqjxusmyop.supabase.co/storage/v1/object/public/github//openwebui-add-tools.png)
 
-捐款支付宝邮箱地址： insion@live.com
+If all is well, you can now access the tools via chat using available models, such as `gpt-4o` or `o4-mini`.
 
+![Open WebUI - Chat](https://yvkbpmmzjmfqjxusmyop.supabase.co/storage/v1/object/public/github//openwebui-macos.png)
 
-## 感谢捐助或定制本项目的用户 排名按时间顺序
-    右建华 5000,定制版
-    李新友 5000,定制版 
-    孙 300,捐助者要求不公开全名
-    高栋 5000,定制版
-    吕雷 2000,购买源码
+## Project Roadmap
 
-##第二版安装请先更新安装beego和xorm
+For full version checklist, see [version-checklist.md](docs/roadmap/version-checklist.md).
 
-    go get -u github.com/astaxie/beego
-    go get -u github.com/lunny/xorm
+| Task | Status | Done | Tested |
+|------|--------|------|--------|
+| Connect to MetaTrader 5 terminal | Finished | ✅ | ✅ |
+| Develop MetaTrader client module | Finished | ✅ | ✅ |
+| Develop MCP Server module | Finished | ✅ | ✅ |
+| Implement MCP tools | Finished | ✅ | ✅ |
+| Publish to PyPi | Finished | ✅ | ✅ |
+| Claude Desktop integration | Finished | ✅ | ✅ |
+| OpenAPI server | Finished | ✅ | ✅ |
+| Open WebUI integration | Finished | ✅ | ✅ |
+| Google ADK integration | On progress | - | - |
 
-##第一版安装请先更新torgo
+## Developer Documentation
 
-    go get -u github.com/insionng/torgo
-
-##安装
-	先安装sqlite3驱动，譬如64位的win7：
-	SQLITE3驱动编译环境是TDM版MINGW64(http://tdm-gcc.tdragon.net/)，
-    安装好后请把TDM版MINGW64的bin目录路径加入到你的win7环境变量path里面。
-
-	
-	go get -u github.com/mattn/go-sqlite3
-
-    下载toropress源码后解压并cd切换目录到 toropress目录下，然后执行go build app.go，编译好后，运行./app即可。
-    默认用户:root,默认密码:rootpass
-
-
-
-
-## 交流
-欢迎大家加入QQ专用交流群:231956113/作者QQ：547092001
-
-技术分享：[http://www.sudochina.com](http://www.sudochina.com)
-
-
-## 授权许可
-除特别声明外，本项目代码遵循[BSD 3-Clause License](<http://opensource.org/licenses/BSD-3-Clause/>)（3项条款的BSD许可协议）。
-
-
-veryhour fork by toropress
-==========================
-
-A very special time website
-
-这是未来社区网站的新模式探索项目~
-基于[Beego](https://github.com/astaxie/beego)与[xorm](https://github.com/lunny/xorm)开发的GOLANG微博社区系统网站，从toropess源码衍生而来!
-
-
-mzr fork by toropress
-==========================
-
-梨花树系统开发代号mzr
-
-这是一个分享图片为主的社区系统~
-基于[Beego](https://github.com/astaxie/beego)与[xorm](https://github.com/lunny/xorm)开发的GOLANG图片社区系统网站，从toropess源码衍生而来!
-
+For developers, see [Developer's Documentation](docs/README.md).

@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metatrader-mcp-server"
+version = "0.2.8"
+authors = [
+  { name = "Aria Dhanang", email = "ariadng@gmail.com" },
+]
+description = "Model Context Protocol (MCP) server built with Python to enable AI LLMs to trade using MetaTrader platform."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file="LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "python-dotenv>=1.1.0",
+  "MetaTrader5>=5.0.45",
+  "numpy>=2.2.4",
+  "pandas>=2.2.3",
+  "tabulate>=0.9.0",
+  "pytest>=8.3.5",
+  "httpx>=0.24.0",
+  "build>=1.2.2.post1",
+  "fastapi>=0.115.12",
+  "uvicorn[standard]>=0.34.1",
+  "pydantic>=2.11.3",
+  "pydantic-settings>=2.8.1",
+  "mcp[cli]>=1.6.0",
+  "click>=8.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["metatrader_mcp*", "metatrader_client*", "metatrader_openapi*"]
+
+[project.urls]
+"Homepage" = "https://github.com/ariadng/metatrader-mcp-server"
+"Bug Tracker" = "https://github.com/ariadng/metatrader-mcp-server/issues"
+
+[project.optional-dependencies]
+client = []
+
+[project.scripts]
+"metatrader-mcp-server" = "metatrader_mcp.cli:main"
+"metatrader-http-server" = "metatrader_openapi.main:main"
