@@ -1,5 +1,4 @@
 <h3 align="center">Free Open Source Bootstrap 5 Design System.</h3>
-------------
 
 <a href="https://templates.iqonic.design/hope-ui/html/dist" target="__blank" title="Hope UI Dashboard">
   <img src="https://assets.iqonic.design/hope-ui/github/rtl-mode-min.png" alt="Hope UI Dashboard" />
