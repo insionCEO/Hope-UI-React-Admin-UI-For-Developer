@@ -1,0 +1,8 @@
+@media (min-width: 640px) {
+    .custom-choicejs .choices__list--dropdown .choices__item--selectable,.custom-choicejs .choices__list[aria-expanded] .choices__item--selectable {
+        padding-right: 10px;
+    }
+    .custom-choicejs .choices__list--dropdown .choices__item--selectable::after,.custom-choicejs .choices__list[aria-expanded] .choices__item--selectable::after {
+        content: ''
+    }
+}

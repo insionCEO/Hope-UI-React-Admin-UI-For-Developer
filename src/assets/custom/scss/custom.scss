@@ -1,0 +1,63 @@
+//blog-treding
+.my-masonry-grid {
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    margin-left: -30px; 
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 30px; 
+    background-clip: padding-box;
+  }
+
+//modals
+.iq-modal{
+    >.modal-dialog {
+        max-width: 1400px;
+    }
+}
+
+//file-manager dropzone
+.file-manager-modal{
+    .dzu-dropzone{
+        min-height:500px;
+        overflow: hidden; 
+        border:1px solid #8a92a6;
+    }
+}
+.dark{
+    .file-manager-modal{
+        .dzu-dropzone{
+            background-color:#151824;
+    }
+}
+}
+.btn-upload{
+    input[type="file"]::file-selector-button{
+        background-color: var(--bs-primary);
+        border-radius: 0.25rem;
+        box-shadow: none;
+        color:white;
+        border:1px solid var(--bs-primary);
+    
+    }
+    input[type="file"]::file-selector-button:hover{
+        background-color: rgba(var(--bs-primary), 0.9);
+    }
+}
+
+
+
+//dark choices
+
+.dark .choices[data-type*=select-one]{
+    .choices__input{
+       background: #222738;
+       border-color: rgba(255,255,255,.1) !important;
+    }
+}
+
+.dark .is-open .choices__list[aria-expanded]{
+    border-color: rgba(#ffff,.1);
+}

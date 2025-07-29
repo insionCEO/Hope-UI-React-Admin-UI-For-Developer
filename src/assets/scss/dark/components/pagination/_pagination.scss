@@ -1,0 +1,31 @@
+.page-item {
+	&.active {
+		.page-link {
+            z-index: 3;
+            color: $white;
+            background-color: $primary;
+            border-color: $secondary;
+        }
+    }
+} 
+.page-item {
+    .page-link {
+        background-color: $card-bg;
+        border-color: $secondary;
+        color: $body-color;
+            &.disabled {
+                .page-link {
+                background-color: $body-bg;
+            }
+        }
+    }
+}
+.list-group{
+    .list-group-item{
+        color: $body-color;
+        border-color: $border-color;
+    }
+}
+.bg-light {
+    background: $dark !important;
+}

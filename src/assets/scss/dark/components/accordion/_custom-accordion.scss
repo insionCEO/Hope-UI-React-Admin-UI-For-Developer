@@ -1,0 +1,27 @@
+.custom-accordion {
+    .accordion-button {
+        color: tint-color($body-color, 30%);
+    }
+    .accordion-item {
+        background: $card-bg;
+    }
+}
+.accordion{
+    .accordion-item{
+        background-color: $body-bg;
+        color: $white;
+        .accordion-header{
+            .accordion-button{
+                background-color: $border-color;
+                color: $white;
+                &:not(.collapsed){
+                    color: $white;
+                    background-color: $border-color;
+                }
+                &:focus{
+                    box-shadow: unset;
+                }
+            }
+        }
+    }
+}
