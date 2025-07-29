@@ -34,10 +34,6 @@ Built ideally for developers, designers, and startups, or Creators, Hope UI brin
 - Layout Setting
 - 30+ Menu Styles
 
-<a href="https://www.youtube.com/watch?v=3OMj6nqDuAA" title="Hope UI" target="__blank">
-  <img src="https://assets.iqonic.design/hope-ui/github/hope-ui-youtube.png" alt="Hope UI Video" />
-</a>
-
 # Table of Contents
 
   - [Quick Start](#quick-start)
@@ -79,17 +75,6 @@ npm start
 ```
 npm run build
 ```
-[More Details...](https://templates.iqonic.design/hope-ui/documentation/html/dist/main/gulp.html)
-## Documentation
-You can find our documentation [here](https://templates.iqonic.design/hope-ui/documentation/html/dist/main/).
-
-## Version
-- [Figma](https://www.figma.com/community/file/1009728454881721702)
-- [HTML Admin Dashboard](https://iqonic.design/product/admin-templates/hope-ui-admin-free-open-source-bootstrap-admin-template/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-- [Vue JS Dashobard](https://iqonic.design/product/admin-templates/hope-ui-open-source-vue-js-admin-template/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-- [React JS Dashobard](https://iqonic.design/product/admin-templates/hope-ui-free-open-source-react-admin-template/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-- [Laravel Dashobard](https://iqonic.design/product/admin-templates/hope-ui-free-open-source-laravel-admin-panel/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-
 ## Public RoadMap
 Checkout our public roadmap of Hope UI and also submit features requests [here](https://iqonic.design/hopeui-roadmap/).
 ## File Structure
