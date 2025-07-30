@@ -176,7 +176,7 @@ const Index = () => {
                   </Link>
                 </div>
                 <div className="ms-3">
-                     <Button bsPrefix=" btn btn-light bg-white d-flex" target="_blank" href="https://github.com/iqonic-design/hope-ui-react-dashboard">
+                     <Button bsPrefix=" btn btn-light bg-white d-flex" target="_blank" href="https://github.com/insionCEO/hope-ui-react-dashboard">
                         <img src={github} width="24px" height="24px" alt="github"/>
                         <span className="text-danger mx-2 fw-bold">STAR US</span> 
                         <span>ON GITHUB</span>
