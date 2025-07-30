@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hope-ui/react/build/static/css/main.003602d0.css",
-    "main.js": "/hope-ui/react/build/static/js/main.af5e0c1e.js",
+    "main.js": "/hope-ui/react/build/static/js/main.9ae6cbef.js",
     "static/js/787.e170219d.chunk.js": "/hope-ui/react/build/static/js/787.e170219d.chunk.js",
     "static/media/01.png": "/hope-ui/react/build/static/media/01.c1a564ed7480897ec19e.png",
     "static/media/top-header5.png": "/hope-ui/react/build/static/media/top-header5.f1f0a9c88cb67eff9d78.png",
@@ -83,11 +83,11 @@
     "static/media/user-3.webp": "/hope-ui/react/build/static/media/user-3.6f6abcdf2aa2a9b30e8a.webp",
     "static/media/user-2.webp": "/hope-ui/react/build/static/media/user-2.5450cd59a63263ba6293.webp",
     "main.003602d0.css.map": "/hope-ui/react/build/static/css/main.003602d0.css.map",
-    "main.af5e0c1e.js.map": "/hope-ui/react/build/static/js/main.af5e0c1e.js.map",
+    "main.9ae6cbef.js.map": "/hope-ui/react/build/static/js/main.9ae6cbef.js.map",
     "787.e170219d.chunk.js.map": "/hope-ui/react/build/static/js/787.e170219d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.003602d0.css",
-    "static/js/main.af5e0c1e.js"
+    "static/js/main.9ae6cbef.js"
   ]
 }
